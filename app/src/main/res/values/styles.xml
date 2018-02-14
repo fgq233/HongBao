@@ -1,0 +1,27 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ToolBarActivity" parent="AppTheme.NoActionBar">
+        <!-- 修改默认ToolBar返回键图标颜色(单个Activity)，如果全局修改可直接放在AppTheme中 -->
+        <item name="android:colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="ToolBarTitleStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <!-- ToolBar的Title -->
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

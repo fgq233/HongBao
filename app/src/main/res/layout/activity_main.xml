@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:title="@string/app_name"
+        app:titleTextAppearance="@style/ToolBarTitleStyle"
+        app:titleTextColor="@color/white" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="20dp"
+        android:divider="@drawable/shape_divider"
+        android:orientation="vertical"
+        android:showDividers="beginning|end">
+
+        <TextView
+            android:id="@+id/tv_start_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_item_color"
+            android:gravity="center_vertical"
+            android:padding="25dp"
+            android:text="@string/start_service"
+            android:textSize="14sp" />
+
+        <include layout="@layout/divider_marginleft" />
+
+        <TextView
+            android:id="@+id/tv_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_item_color"
+            android:gravity="center_vertical"
+            android:padding="25dp"
+            android:text="@string/settings"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_service_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_layout"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="25dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        tools:text="@string/service_un_connected" />
+
+</RelativeLayout>

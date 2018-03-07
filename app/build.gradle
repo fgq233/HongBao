@@ -9,29 +9,17 @@ android {
         applicationId "com.fgq.hb"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0.0"
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
     }
 
-    signingConfigs {
-        releaseConfig {
-            storeFile file("../hongbao.jks")
-            keyAlias 'hongbao'
-            keyPassword '19931126'
-            storePassword '19931126'
-        }
-    }
 
     buildTypes {
-        release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.releaseConfig
-        }
-        debug {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.releaseConfig
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
         }
     }
 }

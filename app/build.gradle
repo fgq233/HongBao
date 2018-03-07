@@ -4,17 +4,13 @@ apply plugin: 'android-apt'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
-    useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
         applicationId "com.fgq.hb"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "v1.0.0"
-        ndk {
-            abiFilters 'armeabi', 'armeabi-v7a'
-        }
+        versionName "1.0.0"
     }
 
     signingConfigs {
@@ -42,7 +38,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     compile 'com.jakewharton:butterknife:8.1.0'
     compile 'com.android.support:design:26.+'
     apt 'com.jakewharton:butterknife-compiler:8.1.0'
